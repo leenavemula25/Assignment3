@@ -67,6 +67,24 @@ li {
 li span {
   flex: 1;
 }
+.edit-btn,
+.delete-btn {
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+/* Edit button styling */
+.edit-btn {
+  background: #ffa500; /* orange */
+}
+
+.edit-btn:hover {
+  background: #cc8400;
+}
 
 .delete-btn {
   background: #ff4d4d;

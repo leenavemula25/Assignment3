@@ -15,6 +15,16 @@ function addTask() {
   const li = document.createElement('li');
   const span = document.createElement('span');
   span.textContent = taskText;
+   const editBtn = document.createElement('button');
+  editBtn.textContent = 'Edit';
+  editBtn.classList.add('edit-btn');
+
+  editBtn.addEventListener('click', () => {
+    const newTask = prompt('Edit your task:', span.textContent);
+    if (newTask !== null && newTask.trim() !== '') {
+      span.textContent = newTask;
+    }
+  });
 
   const delBtn = document.createElement('button');
   delBtn.textContent = 'Delete';
@@ -25,6 +35,7 @@ function addTask() {
   });
 
   li.appendChild(span);
+  li.appendChild(editBtn);
   li.appendChild(delBtn);
   taskList.appendChild(li);
 
